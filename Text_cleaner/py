@@ -1,0 +1,10 @@
+def clean_text(text):
+    text = text.lower()
+    words = text.split()
+    words = [word.strip(".,!?;:") for word in words]
+    return " ".join(words)
+
+text = input("Enter text: ")
+
+print("\nCleaned text:")
+print(clean_text(text))
